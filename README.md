@@ -72,9 +72,9 @@ I also have not figured out the screen solution yet, so bear with me, I'm still 
 
 14.) install wifi antenna solution, there are two possible solutions for this:
 
-    14a.) glue in two rpsma to mini pcie wifi card adapter pigtails into the holes on the top of the motherboard tray and run the cables to where the wifi card gets installed.
+  14a.) glue in two rpsma to mini pcie wifi card adapter pigtails into the holes on the top of the motherboard tray and run the cables to where the wifi card gets installed.
    
-    14b.) stick the framework wifi antenna (screwed into the bottom of the display pannel on the framework 13 laptop) to the case somewhere, and run the wires through the small hole by where the wifi card will be inserted.
+  14b.) stick the framework wifi antenna (screwed into the bottom of the display pannel on the framework 13 laptop) to the case somewhere, and run the wires through the small hole by where the wifi card will be inserted.
 
 15.) connect the wifi antenna wires (either from the adapters or from the framework wifi antenna) to the wifi card and insert the card into the mini pcie slot.
 
