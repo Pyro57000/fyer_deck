@@ -1,6 +1,8 @@
 # fyer_deck
 The STLs and build/install instrcutions for the Fyerdeck cyberdeck project!
 
+I do plan to make insructional videos for assembly and software installation to include here, but I'll do that when the design is finalized!
+
 # Purpose
 I like computers. Alot. I've always wanted to build my own mobile computing system, kind of like a laptop but more unique. I then discovered Cyberdecks and thought they were the coolest thing ever. Especially with their tie into Cyberpunk media, I was instantly hooked. While existing Cyberdeck designs typically utilize SBCs like rasbperry pis, I wanted mine to be a powerhouse that I could use as my "personal laptop" but  with it being in a more interesting form factor. Then Framework entered the picture with its user upgradable and servicable laptop. I immediatly saw the potential to use Framework parts to build a kick ass cyber deck. Framework also released designs for not only their parts, but a 3d printable case for their components that would turn the framework13 mainboard into a desktop. This was so close to what I wanted!
 
