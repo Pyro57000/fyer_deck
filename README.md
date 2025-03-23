@@ -109,7 +109,7 @@ Otherwise, the whole purpose of VR/AR compute environments is to not be constrai
 	5. `cd ../simular; cargo build --release`
 8. (optional) copy the resulting binaries to somewhere on your $PATH, to make running them easier.
 9. make a stardust startup script.
-	1. 9a.) `mkdir ~/.config/stardust`
+	1. `mkdir ~/.config/stardust`
 	2. `nano ~/.config/startudst/startup`
 	3. paste the following script into the editor, and edit the paths to accurately reflect where you either compiled the binaries, or saved them to your path:
 
