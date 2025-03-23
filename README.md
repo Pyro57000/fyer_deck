@@ -38,7 +38,7 @@ I'm still in the prototyping phase (I'm close to a final design, so the current 
 I also have not figured out the screen solution yet, so bear with me, I'm still working on it!
 
 # Assembly
-1. print out all the parts in the stls/fyerdeck folder, starting with the battery tray.
+1. print out all the parts in the stls/fyerdeck_files folder, starting with the battery tray.
 2. assemble the battery tray halves together (it may require a hammer to get the halves flush, since they are friction fit it will be a VERY tight fit, this is expected.
 3. put the framework speaker modules in the slots for them. At the moment they are just friction fit, so I might design some kind of locking mechanism for them, but haven't had to yet. 
 4. make sure the connector is run about where it will pop through the motherboard tray.
