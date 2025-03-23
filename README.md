@@ -8,14 +8,20 @@ Finally I decided this was they year I would do it (especially with their ryzen 
 
 ## need to haves:
 1.) The framework battery would need to be included, this allows me to utilize the framework mainboard USB-C charging capability.
+
 2.) The framework powerbutton would need to be incorporated, this would allow me to utilize fingerprint authentication within the system.
+
 3.) the framework trackpad needs to be included. While I will primarily use it with a regular desktop mouse, the ability to use it without a desk is a must.
+
 4.) I want to use my desktop keyboard with it. I have a particular layout that I love to use (alice).
+
 5.) It needs to have a small (8 inches or less diagonally) screen on it for diagnostics and boot sequence monitoring.
+
 6.) the primary screen setup will be AR glasses or VR goggles with camera passthrough.
 
 ## Nice to haves:
 1.) the framework speakers so I don't *need* to use headphones if I don't want to.
+
 2.) the framework audio port so I can use 3.5mm audio gear with it.
 
 # Design
@@ -37,41 +43,73 @@ I also have not figured out the screen solution yet, so bear with me, I'm still 
 
 # Assembly
 1.) print out all the parts, starting with the battery tray.
+
 2.) assemble the battery tray halves together (it may require a hammer to get the halves flush, since they are friction fit it will be a VERY tight fit, this is expected.
+
 3.) put the framework speaker modules in the slots for them. At the moment they are just friction fit, so I might design some kind of locking mechanism for them, but haven't had to yet. 
+
 4.) make sure the connector is run about where it will pop through the motherboard tray.
+
 5.) put the battery in the battery tray, making sure the connector is about where it needs to be to pop through the motherboard tray.
+
 6.) assemble the motherboard tray halves together (the same way you did the battery tray) If some of the support blocks are getting in the way just break them off with pliers. (I'll try to clean up the stls to avoid these once the design is finalized).
+
 7.) place the mainboard in the mainboard tray and line it up with the battery tray (do not snap them together yet).
+
 8.) connect the power lead from the battery to the port on the mainboard.
+
 9.) connect the speakers to the mainboard (this is a PITA and you will need tweezers for it)
+
 10.) insert your framework usbc connector modules, this locks the motherboard to the tray.
+
 11.) snap the battery tray to the mainboard tray (this may take some finagling, its a tight fit.
+
 12.) place the audo port into the mainboard tray and connect the ribbon cable to the mainboard. (you may need to glue it down, still working on a solution to that)
+
 13.) insert the assembly pins into the holes for them on the mainboard tray
+
 14.) install wifi antenna solution, there are two possible solutions for this:
+
     14a.) glue in two rpsma to mini pcie wifi card adapter pigtails into the holes on the top of the motherboard tray and run the cables to where the wifi card gets installed.
+   
     14b.) stick the framework wifi antenna (screwed into the bottom of the display pannel on the framework 13 laptop) to the case somewhere, and run the wires through the small hole by where the wifi card will be inserted.
+
 15.) connect the wifi antenna wires (either from the adapters or from the framework wifi antenna) to the wifi card and insert the card into the mini pcie slot.
+
 16.) place the connector guard over the wires and screw the protector, and wifi card into the mainboard case with the screw provided by framework. (note this is a metal screw going into plactic... screw carefull and don't over tighten. Just tight enough to hold it.)
+
 17.) take the powerbutton and powerbutton bracket and line them up.
+
 18.) secure them together (either with screws and nuts or with glue)
+
 19.) figure out where you want the power button monted on the center piece of the top cover
+
 20.) run the power button lead through a ventilation hole near where you want it mounted, and glue the power button bracket to the top cover.
+
 21.) glue the powerbutton cover over top of the power button (this is optional, but should make it harder to aciddentally hit when its in a bag.
+
 22.) connect the ribbon cables for the trackpad and power button to the trackpad itslef.
+
 23.) insert the trackpad into the center piece of the top cover, being carful to run the ribbon cables through to they can used.
+
 24.) connect the power button ribbon cable to the power button lead on the back side of the center piece of the top cover.
+
 25.) connect the center piece of the top cover to the motherboard tray, being carful to make sure the ribbon cables aren't touching the cooling fan.
+
 26.) connect the trackpad ribbon cable to the slot for it on the mainboard.
+
 27.) connect the other two top cover pannels to the mainboard tray, being carful to not put too much stress on the ribbon cables when you press them down.
+
 28.) you're DONE enjoy your cyber deck 
 
 
 # Software
 I'm a linux guy, so this will primarlily focus on setting Linux up for this.
+
 1.) install your linux distro of choice normally (you will likely need to connect to a monitor for this, or the xreal glasses can act as a normal monitor as well.)
+
 2.) once you have that installed and configured how you would like it, decide if you'll be using AR glasses (like the xreals), a VR headset (like the quest 3), or both as your primary monitor solution.
+
 3.) If you choose the Xreals, congrats you're done!
 
 ## VR goggles/fully 3d envrionment
@@ -80,43 +118,76 @@ If you want to use a fully 3d envrionment for your cyberdeck (like I do) there's
 the primary software I use for this is StardustXR (https://stardustxr.org)
 
 Otherwise, the whole purpose of VR/AR compute environments is to not be constraied by archaeic limitations like "monitors", right? For that we need a bit more setup, but its sick!
+
 1.) install an XR run time like wivrn, monado, or steamVR. Personally I think wivrn is the best for this project since it supports camera passthrough by default.
+
 2.) pair your VR headset with your XR runtime (varies but all projects have pretty decent documentation to set this up).
+
 3.) Now we need to setup stardust to do what we want. In order for passthrough to work as expected we need the dev branches of stardust. 
+
 4.) stardust is written in rust, and we'll need to compile it so install the following packages:
+
   rustup
+  
   cmake
+  
   fontconfig
+  
   dlopen
+  
   openxr-loader
+  
   EGL+GLES (I didn't need to explicetly install this, but since its listed in stardust's repo I wanted to inclue it)
+  
   GLX+Xlib (I didn't need to explicetly install this, but since its listed in stardust's repo I wanted to inclue it)
+
 5.) create a folder to keep your stardust files in `mkdir stardust && cd stardust`
+
 6.) clone the dev branches of the needed stardust repositories
+
   6a.) `git clone -b dev https://github.com/StardustXR/server.git`
+  
   6b.) `git clone -b dev https://github.com/StardustXR/flatland.git`
+  
   6c.) `git clone -b dev https://github.com/StardustXR/protostar.git`
+  
   6d.) `git clone -b dev https://github.com/StardustXR/non-spatial-input.git`
+
 7.) compile the binaries we need
+
   7a.) `cd server; cargo build --release || cargo build --release` (for this one the first time building sometimes fails for me, but usually just re-running the build command works)
+  
   7b.) `cd ../flatland; cargo build --release`
+  
   7c.) `cd ../protostar; cargo build --release`
+  
   7d.) `cd ../non-spatial-input/manifold; cargo build --release`
+  
   7e.) `cd ../simular; cargo build --release`
+
 8.) (optional) copy the resulting binaries to somewhere on your $PATH, to make running them easier.
+
 9.) make a stardust startup script.
+
   9a.) `mkdir ~/.config/stardust`
+  
   9b.) `nano ~/.config/startudst/startup`
+  
   9c.) past the following script into the editor, and edit the paths to accurately reflect where you either compiled the binaries, or saved them to your path:
+
 ```
 #!/bin/bash
 
 xwayland-satellite :69 &
 DISPLAY=:69 path/to/your/hexagon_launcher & /path/to/your/flatland &
+
 ```
+
   9d.) save and close the editor
+
 10.) make that script executable! `chmod +x ~/.config/stardust/startup`
-10.) you're done! (kinda) 
+
+11.) you're done! (kinda) 
 
 With all of that done you can now start up stardust in your XR runtime. You can do this by starting your runtime (like wivrn) and connecting your headset to it. Once you're connected you can either launch stardustxr with wivrn using the custom executable option, or just run the stardust binary you compiled.
 This will launch stardust and autmatically run that startup script we created. You should be able to see a hexagon shaped button (you may need to lean back a bit to see it) you can use either controller grip buttons or hand tracking to grab it and move it around you.
