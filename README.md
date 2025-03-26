@@ -38,7 +38,7 @@ I'm still in the prototyping phase (I'm close to a final design, so the current 
 I also have not figured out the screen solution yet, so bear with me, I'm still working on it!
 
 # Assembly
-1. print out all the parts, starting with the battery tray.
+1. print out all the parts in the stls/fyerdeck_files folder, starting with the battery tray.
 2. assemble the battery tray halves together (it may require a hammer to get the halves flush, since they are friction fit it will be a VERY tight fit, this is expected.
 3. put the framework speaker modules in the slots for them. At the moment they are just friction fit, so I might design some kind of locking mechanism for them, but haven't had to yet. 
 4. make sure the connector is run about where it will pop through the motherboard tray.
@@ -109,7 +109,7 @@ Otherwise, the whole purpose of VR/AR compute environments is to not be constrai
 	5. `cd ../simular; cargo build --release`
 8. (optional) copy the resulting binaries to somewhere on your $PATH, to make running them easier.
 9. make a stardust startup script.
-	1. 9a.) `mkdir ~/.config/stardust`
+	1. `mkdir ~/.config/stardust`
 	2. `nano ~/.config/startudst/startup`
 	3. paste the following script into the editor, and edit the paths to accurately reflect where you either compiled the binaries, or saved them to your path:
 
