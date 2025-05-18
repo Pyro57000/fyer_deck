@@ -25,55 +25,61 @@ Luckily the design for the bottom parts of the case that accomodate all of my ne
 
 With that part done all I needed to do was figure out a top cover design that would integrate the trackpad and powerbutton, as well as have plenty of ventilation for the CPU cooler, since the bottom intake would be obstructed by the battery. I did find a good top mount design that had plenty of ventilation, but did not encorporate the trackpad and powerbutton, so it would need to be tweaked. I can't find the original designer for the one I used anymore (sorry if that's you, please open an issue with this repo with how you'd like to be attributed as well as a link to your design so I can give you credit!).
 
-I took this deign and put in in tinker cad. I then 3d modeled the trackpad and powerbutton. After trying a few ideas I setteled on having the trackpad be flush with the top cover, and supported from the back. Ideally you'd probably want to glue, tape, or magnetically mount it in place to make sure it doesn't fall out the top, but I'm still experimenting with that.
+I took this deign and put in in tinker cad. I then 3d modeled the trackpad and powerbutton. After trying a few ideas I settled on having the trackpad be flush with the top cover, and supported from the back. I added small tracks for the bottom wings of the trackpad to slot into, and blank spaced for the top wings. You can still glue it in if you would like for more security, but I haven't found that to be necessary, its held in place pretty well just with the bottom wing tracks.
 
 I just designed some holding struts for the trackpad, then turned the trackpad into a hole and combined the shapes.
 
 The track pad is mounted at 90 degrees relative to how you'd expect it to be mounted based on laptop design... we'll get to that.
 
-From the get go I wanted this cyberdeck to be versitile. I wanted to use it on a desktop and place it where ever I wanted on that desktop, as well as on the go just in my lap. To facilitate this I dediced that a mounting frame that can hold both the keybaord and cyberdeck would be the best solution then trying to integrate them in to a permanently affixed single piece. This would allow me to make a few modification to the case design as possilbe, while still giving me extreme flexibility. Since the trackpad and powerbutton are top mounted on the case design stacking the keyboard ontop of it vertically was out of the question. So the design locks onto the side of the keyboard with magnets (this will require alittle drilling into the keyboard case, but very minor drilling). and secures around the cyberdeck case itself, so it will kind of resemble a T when fully assembled in the mobile configuration. This puts the trackpad in the natrual position for right handed peopl, and if you are left handed, just drill the magnets into the other side of the keyboard and mount it there! This is why the track pad is rotated 90 degrees, to allow for the "vertical" mounting position. An enhancement would be if the trackpad mount were a separate part that magnetically attaches so you could rotate it at will, but I haven't really looked into that at all.
+From the get go I wanted this cyberdeck to be versitile. I wanted to use it on a desktop and place it where ever I wanted on that desktop, as well as on the go just in my lap. To facilitate this I decided that a mounting frame that can hold both the keyboard and cyberdeck would be a better solution than trying to integrate them in to a permanently affixed single piece. This would allow me to make as few modifications to the case design as possible, while still giving me extreme flexibility. Since the trackpad and powerbutton are top mounted on the case design stacking the keyboard ontop of it vertically was out of the question. So the design locks onto the side of the keyboard with magnets I simply super glued some magnets onto the side and bottom of the keyboard. This does mean that you need to use the built in feet of the keyboard otherwise it slides around a bit, but that's not a bad trade off since most people use the keyboard feet anyways. I also decided to magnetically mount the cyberdeck. When in the mounting dock it will kind of resemble a T when fully assembled in the mobile configuration. This puts the trackpad in the natrual position for right handed peopl, and if you are left handed, just glue the magnets onto the other side of the keyboard and mount it there! This is why the track pad is rotated 90 degrees, to allow for the "vertical" mounting position. An enhancement would be if the trackpad mount were a separate part that magnetically attaches so you could rotate it at will, but I haven't really found the need or use case to do this. If you need a left handed trackpad setup, simply mirror the mounting dock.
 
-I'm still in the prototyping phase (I'm close to a final design, so the current ones shouldn't change much) so expect changes and for it to not quite fit perfectly yet. Again I'm working on it. 
+I'm still figuring out the powerbutton solution. The current one just glues into the top cover itself, but since its not supported from the back pressing the button is kind of a PITA. Ideally I'd have some kinds of pocket for the button to slide into that you could slide it into, but I haven't really settled on a design for that I like yet. 
 
-I also have not figured out the screen solution yet, so bear with me, I'm still working on it!
+I knew from the get go that I wanted a small screen mounted to the cyberdeck that would be used to enter the LUKs password if the drive is encrypted (which it should be since this is a mobile computer). After doing way too much research into the eDP port on the framework mainboard and trying to adapt it to one of those cheap USB pc monitor screens you can get from ali express I finally just bit the bullet and settled for a small 5 inch HDMI and USB-C powered screen. I already had a small dongle that plugged into a USB-C port and provided a USB-A port and HDMI port. To ensure the screen only took one of my I/O ports on the framework mainboard. I also really wanted the screen to fold over the top cover to make sure it didn't get scratched up in a bag. So I needed a hinge solution. Luckily Framework also had me covered there. I just use one of the original screen hinges. I hollowed out a little slot in the top cover to glue one half of the hinge into. The screen I ended up buying on amazon had a little metal bracket and a mounting hole on the back of the screen, so I just needed to find a way to attach the bracket to the hinge. After trying a few direct attachment idea I settled on a small 3d printed box that you can fill with glue or epoxy. The bot fits around the part of the hinge that the screen should connect to, and the bracket that came with the screen, then you just fill the box with glue or epoxy and let it cure. the result is a fairly secure connection between the hinge and the screen bracket.
+
+In the original case design the battery is just kinda exposed on the back. This is fine for stationary use cases, but I wanted to make sure the battery was at least somewhat protected while in a bag. I thought about doing some kind of snap in battery door, but I'm not good at 3d modeling so that proved to be a bit tricky for my skill set. Instead I just added some holes for magnets to the bottom of the case, and modeled a door that would have magnets in the same spot. Now we have a magnetically attacking battery door, that still allows the battery to breath for cooling. The downside to this approach is the magnetic fields produced by the door when its attached interfere with the magnetic fields used by the mounting dock. My solution is to just take the door off when I'm using the mounting dock, but it could probably be solved by either carefully choosing the polarity of the magnets, moving the magnets for the door, or doing the snap in door idea. This solution works good enough for me, but if you come up with a mod that works better please let me know!
 
 # Assembly
-1. print out all the parts in the stls/fyerdeck_files folder, starting with the battery tray.
-2. assemble the battery tray halves together (it may require a hammer to get the halves flush, since they are friction fit it will be a VERY tight fit, this is expected.
-3. put the framework speaker modules in the slots for them. At the moment they are just friction fit, so I might design some kind of locking mechanism for them, but haven't had to yet. 
-4. make sure the connector is run about where it will pop through the motherboard tray.
-5. put the battery in the battery tray, making sure the connector is about where it needs to be to pop through the motherboard tray.
-6. assemble the motherboard tray halves together (the same way you did the battery tray) If some of the support blocks are getting in the way just break them off with pliers. (I'll try to clean up the stls to avoid these once the design is finalized).
-7. place the mainboard in the mainboard tray and line it up with the battery tray (do not snap them together yet).
-8. connect the power lead from the battery to the port on the mainboard.
-9. connect the speakers to the mainboard (this is a PITA and you will need tweezers for it)
-10. insert your framework usbc connector modules, this locks the motherboard to the tray.
-11. snap the battery tray to the mainboard tray (this may take some finagling, its a tight fit.
-12. place the audo port into the mainboard tray and connect the ribbon cable to the mainboard. (you may need to glue it down, still working on a solution to that)
-13. insert the assembly pins into the holes for them on the mainboard tray
-14. install wifi antenna solution, there are two possible solutions for this:
-	1. glue in two rpsma to mini pcie wifi card adapter pigtails into the holes on the top of the motherboard tray and run the cables to where the wifi card gets installed.
-	2. stick the framework wifi antenna (screwed into the bottom of the display pannel on the framework 13 laptop) to the case somewhere, and run the wires through the small hole by where the wifi card will be inserted.
-15. connect the wifi antenna wires (either from the adapters or from the framework wifi antenna) to the wifi card and insert the card into the mini pcie slot.
-16. place the connector guard over the wires and screw the protector, and wifi card into the mainboard case with the screw provided by framework. (note this is a metal screw going into plactic... screw carefull and don't over tighten. Just tight enough to hold it.)
-17. take the powerbutton and powerbutton bracket and line them up.
-18. secure them together (either with screws and nuts or with glue)
-19. figure out where you want the power button monted on the center piece of the top cover
-20. run the power button lead through a ventilation hole near where you want it mounted, and glue the power button bracket to the top cover.
-21. glue the powerbutton cover over top of the power button (this is optional, but should make it harder to aciddentally hit when its in a bag.
-22. connect the ribbon cables for the trackpad and power button to the trackpad itslef.
-23. insert the trackpad into the center piece of the top cover, being carful to run the ribbon cables through to they can used.
-24. connect the power button ribbon cable to the power button lead on the back side of the center piece of the top cover.
-25. connect the center piece of the top cover to the motherboard tray, being carful to make sure the ribbon cables aren't touching the cooling fan.
-26. connect the trackpad ribbon cable to the slot for it on the mainboard.
-27. connect the other two top cover pannels to the mainboard tray, being carful to not put too much stress on the ribbon cables when you press them down.
-28. you're DONE enjoy your cyber deck 
+1. print out all the STLs in the fyerdeck_files folder, you will need 10 connector pins(though printing extras is a good idea because they are easy lose). I personally used PETG for all the parts except the connector pins which I printed in PLA.
+2. Slot the battery tray halves together, and the motherboard tray halves together.
+3. insert the speakers and battery into the battery tray, making sure to run the cables about where they are going to go.
+4. line the motherboard tray and the battery tray up, there might be one support pylon from the original motherboard tray design that you need to snap off, I can't remember if I removed that or not, so check for interference.
+5. push the battery and speaker cables up through the motherboard tray holes where needed, then press the motherboard tray into the battery tray. Note it may take considerable force to mate them properly.
+6. Test fit the magnets into the magnet holes. I tried to account for some tolerance, but some are still a bit tight. If needed use needle nose pliers, or a round file to expand the magnet holes.
+7. glue the magnets into the magnet holes. I just used off the shelf super glue and that seems to work pretty well.
+8. insert the connector pins into the motherboard tray
+9. Mount the wifi card and ssd to the framework mainboard.
+10. place the mainboard in the motherboard tray, connecting the battery and speaker cables as you do.
+11. insert the exapnsion I/O cards into the motherboard tray, and connect them to the USB-C interfaces on the mainboard, this is how the mainboard is retained in the motherboard tray.
+12. plug the Audio board into the mainboard, and screw it into the motherboard tray using the original screws from the framework laptop.
+13. take the top cover where the screen needs to mount and insert the longer part of the framework hinge into the hollowed out slot. 
+14. adjust where it sits to suit your preferance.
+15. fill the slot with dual part epoxy and let it sit for 24 hours to ensure it's fully cured. (TIP: you can hotglue the hinge part in place to hold it where you want it before you fill it with epoxy to make sure it doesn't move)
+16. slide the hinge connector box around the shorter side of the framework hinge. slide the bracket that came with the screen into the hinge connector box, and fill the box with glue. Dual part epoxy would probably be a good idea here, but I was lazy and just used hot glue, and that seems to have worked well enough.
+17. glue the power button to the metal bracket it comes with at the connection point where the screws would have held them together.
+18. glue the metal bracket on the power button to the inside of the center top pannel, lining up the power button with the hole.
+19. inser the bottom wings of the trackpad into the slots in the center part of the top pannel, and push backwards letting the top wings come to rest inside the holes in the side cut out for them.
+20. connect the power button to the trackpad via the normal cable.
+21. plug the trackpad into the main board, making sure to line it up in such a way that it bends as little as possible.
+22. press the center panel into the connector pins on the motherboard tray.
+23. (optional) attach the antenna mounts for the wifi card to the holes provided in the top panel and plug the antennas into the wifi card
+24. press the panel that covers the side of the main board with the wifi card into the connector pins
+25. press the last top cover panel into the connector pins. and screw the screen onto the mounting bracket.
+26. attach the USB-C -> USB-A + HDMI adapter to the back of the screen (I just used double sided tape).
+27. connect the screen to the USB-A and HDMI ports of the dongle, using very short cables if possible.
+28. connect the dongle to one of the USB-C ports on the mainboard, I used a right angle adapter to make sure it didn't interfere with the hinge.
+29. match the cyber deck up with the keyboard dock, and make sure the magnets are facing the right way. 
+30. test fig the magnets, again the holes may need some expanding.
+31. double check the magnet direction multiple times! 
+32. glue the magnets into the keyboard dock.
+33. glue the magnets onto your keyboard, making sure to line them up and again checking multiple times for magnet direction.
+34. let the glue dry and you're done!
 
 
 # Software
 I'm a linux guy, so this will primarlily focus on setting Linux up for this.
 
-1. install your linux distro of choice normally (you will likely need to connect to a monitor for this, or the xreal glasses can act as a normal monitor as well.)
+1. install your linux distro of choice normally, installing on the small diagnostic screen may be possible, but it'll also be a PITA, so maybe connect a normal monitor, or use the Xreal Glasses.
 2. once you have that installed and configured how you would like it, decide if you'll be using AR glasses (like the xreals), a VR headset (like the quest 3), or both as your primary monitor solution.
 3. If you choose the Xreals, congrats you're done!
 
@@ -82,19 +88,19 @@ If you want to use a fully 3d envrionment for your cyberdeck (like I do) there's
 
 the primary software I use for this is StardustXR (https://stardustxr.org)
 
-Otherwise, the whole purpose of VR/AR compute environments is to not be constraied by archaeic limitations like "monitors", right? For that we need a bit more setup, but its sick!
+The whole purpose of VR/AR compute environments is to not be constrained by archaic limitations like "monitors", right? For that we need a bit more setup, but its sick!
 
-1. install an XR run time like wivrn, monado, or steamVR. Personally I think wivrn is the best for this project since it supports camera passthrough by default.
+1. install an XR run time like wivrn, monado, or steamVR. Personally I think wivrn is the best for this project since it supports camera pass-through by default.
 2. pair your VR headset with your XR runtime (varies but all projects have pretty decent documentation to set this up).
-3. Now we need to setup stardust to do what we want. In order for passthrough to work as expected we need the dev branches of stardust. 
+3. Now we need to setup stardust to do what we want. In order for pass-through to work as expected we need the dev branches of stardust. 
 4. stardust is written in rust, and we'll need to compile it so install the following packages:
 	1. rustup
 	2. cmake
 	3. fontconfig
 	4. dlopen
 	5. openxr-loader
-	6. EGL+GLES (I didn't need to explicetly install this, but since its listed in stardust's repo I wanted to inclue it)
-	7. GLX+Xlib (I didn't need to explicetly install this, but since its listed in stardust's repo I wanted to inclue it)
+	6. EGL+GLES (I didn't need to explicitly install this, but since its listed in stardust's repo I wanted to include it)
+	7. GLX+Xlib (I didn't need to explicitly install this, but since its listed in stardust's repo I wanted to include it)
 5. create a folder to keep your stardust files in `mkdir stardust && cd stardust`
 6. clone the dev branches of the needed stardust repositories
 	1. `git clone -b dev https://github.com/StardustXR/server.git`
@@ -127,9 +133,9 @@ DISPLAY=:69 path/to/your/hexagon_launcher & /path/to/your/flatland &
 With all of that done you can now start up stardust in your XR runtime. You can do this by starting your runtime (like wivrn) and connecting your headset to it. Once you're connected you can either launch stardustxr with wivrn using the custom executable option, or just run the stardust binary you compiled.
 This will launch stardust and autmatically run that startup script we created. You should be able to see a hexagon shaped button (you may need to lean back a bit to see it) you can use either controller grip buttons or hand tracking to grab it and move it around you.
 
-Once you have the hexagon button placed where you want it, simply tape it with hand tracking or with your controller trigger to open the launcher menu. This will lay out all of your installed applications in a hexagon grid. To launch a program simply grab the hexagon icon for the program and drop it where you want tne new window to spawn.
+Once you have the hexagon button placed where you want it, simply tap it with hand tracking or with your controller trigger to open the launcher menu. This will lay out all of your installed applications in a hexagon grid. To launch a program simply grab the hexagon icon for the program and drop it where you want tne new window to spawn.
 Mouse inputs can be handled by controller or hand tracking, but keyboard isn't working!  Let's fix that.
 
 Remember that non-spatial-input repo you downloaded and compiled manifold and simular from? Here's where that comes into play! To capture your mouse and keyboard simply run manifold and pipe it into simular! `/path/to/your/manifold | /path/to/your/simular` 
-Now a black window should open on your normal desktop environment! click inside of it to capture your inputs. Keyboard and mouse inputs are sent to which ever application you're currently looking at, though mouse inputs are currently broken. This is being worked on. 
+Now a black window should open on your normal desktop environment! click inside of it to capture your inputs. Keyboard and mouse inputs are sent to which ever application you're currently looking at. Each application will draw its own cursor, and whichever application you're currently looking at will receive mouse and keyboard input. It switched application targets automatically as you look around. You can also tap on the application window like a touch screen for mouse input, but this isn't as accurate and can be a bit tricky.
 
